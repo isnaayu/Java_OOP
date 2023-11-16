@@ -1,6 +1,6 @@
 package model;
 
-public class Monster {
+public class Monster implements Action{
     private String name;
     private Integer hp;
     private Integer damage;
@@ -47,6 +47,7 @@ public class Monster {
                 '}';
     }
 
+    @Override
     public void attackBy(Monster monster){
         if (monster.equals(this)){
             System.out.println("Cannnot hit my self");
@@ -55,6 +56,7 @@ public class Monster {
         this.hp -= monster.getDamage();
     }
 
+    @Override
     public void attackBy(Hero hero){
         this.hp -= hero.getDamage();
     }
