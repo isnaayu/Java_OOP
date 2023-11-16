@@ -1,24 +1,41 @@
 import model.*;
+import util.Day;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(Day.SUNDAY);
+        Day days = Day.SUNDAY;
+        switch (days){
+            case SUNDAY:
+                System.out.println("It Sunday");
+                break;
+            case MONDAY:
+                System.out.println("It Monday");
+                break;
+        }
 
-        Cat cat = new Cat();
-        String result1 = cat.makeSound("Meong");
-        cat.typeAnimal("Cat");
+        for (Day day : Day.values()){
+            System.out.println(day.getName()+ " "+days.ordinal());
+        }
 
-        Dog dog = new Dog();
-        String result2 = dog.makeSound("Guk");
+        System.out.println(days.nextDay());
 
-        System.out.println(result1);
-        System.out.println(result2);
-
-//        Untuk mengubah tipe datanya
-        Animal garong = new Cat();
-        Cat orange = (Cat) garong; //DownCasting -> dari bentuk umum ke spesifik
-
-        Dog myDog = new Dog();
-        Animal myAnimal = (Animal) myDog; //UpperCating .=> dari bentuk spesifik ke umum
+//        Cat cat = new Cat();
+//        String result1 = cat.makeSound("Meong");
+//        cat.typeAnimal("Cat");
+//
+//        Dog dog = new Dog();
+//        String result2 = dog.makeSound("Guk");
+//
+//        System.out.println(result1);
+//        System.out.println(result2);
+//
+////        Untuk mengubah tipe datanya
+//        Animal garong = new Cat();
+//        Cat orange = (Cat) garong; //DownCasting -> dari bentuk umum ke spesifik
+//
+//        Dog myDog = new Dog();
+//        Animal myAnimal = (Animal) myDog; //UpperCating .=> dari bentuk spesifik ke umum
 
 
 //        Block newBlock = new Block(20, 30,25);
